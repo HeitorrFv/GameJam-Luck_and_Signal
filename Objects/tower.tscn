@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://fskvg0ku8lqn"]
 
 [ext_resource type="Script" uid="uid://2llxv0l7orop" path="res://Scripts/tower.gd" id="1_vdavm"]
+[ext_resource type="Texture2D" uid="uid://fk4yo03pvdyg" path="res://Sprites/TORRE DE BABEL.png" id="2_xughr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_70krq"]
+size = Vector2(19.118061, 32.09557)
 
 [node name="Tower" type="StaticBody2D" unique_id=1403503163]
 scale = Vector2(2.7418113, 2.7418113)
 script = ExtResource("1_vdavm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=18474348]
+y_sort_enabled = true
+position = Vector2(-0.44096994, 3.478264e-07)
 shape = SubResource("RectangleShape2D_70krq")
+disabled = true
 debug_color = Color(0, 0.62650937, 0.5134416, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=392998680]
+texture = ExtResource("2_xughr")

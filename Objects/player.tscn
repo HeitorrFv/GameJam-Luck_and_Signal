@@ -7,6 +7,7 @@
 size = Vector2(10, 13)
 
 [node name="Player" type="CharacterBody2D" unique_id=987165084]
+y_sort_enabled = true
 scale = Vector2(3, 3)
 slide_on_ceiling = false
 script = ExtResource("1_y0qk3")

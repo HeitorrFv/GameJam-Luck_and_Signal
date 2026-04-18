@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://di1nog2kf727f" path="res://UI/card.tscn" id="8_hkbd0"]
 
 [node name="Game" type="Node2D" unique_id=141833346]
+y_sort_enabled = true
 script = ExtResource("1_cnmcn")
 
 [node name="Timer" type="Timer" parent="." unique_id=2124504861]

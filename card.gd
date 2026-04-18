@@ -11,6 +11,7 @@ func _ready() -> void:
 # Called when the node enters the scene tree for the first time.
 func open() -> void:
 		Data.CardOpen = 0
+		Data.move = 0
 		
 		var tween_intro = create_tween()
 		tween_intro.tween_property(blur.material, "shader_parameter/lod", 2.5, 0.5)
