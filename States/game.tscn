@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://4twmnycq0vf6"]
 
+[ext_resource type="Script" uid="uid://dhsbcnuo02y2e" path="res://States/Scripts/game.gd" id="1_cnmcn"]
 [ext_resource type="PackedScene" uid="uid://d2xpqf8ppwg5i" path="res://Objects/player.tscn" id="1_djap5"]
 [ext_resource type="PackedScene" uid="uid://ddb7j3mgcl5pw" path="res://Objects/spawner.tscn" id="3_1mka6"]
 [ext_resource type="PackedScene" uid="uid://d087dbsxgts81" path="res://Objects/terreno.tscn" id="4_kt1jv"]
 [ext_resource type="PackedScene" uid="uid://mxo6hvy5twau" path="res://UI/inventario.tscn" id="4_ou3a6"]
+[ext_resource type="PackedScene" uid="uid://fskvg0ku8lqn" path="res://Objects/tower.tscn" id="5_kt1jv"]
+[ext_resource type="PackedScene" uid="uid://bocr03xw2ekxe" path="res://UI/ui.tscn" id="6_trm3b"]
 
 [node name="Game" type="Node2D" unique_id=141833346]
+script = ExtResource("1_cnmcn")
+
+[node name="Timer" type="Timer" parent="." unique_id=2124504861]
+wait_time = 4.0
+autostart = true
 
 [node name="Terreno" parent="." unique_id=2062443727 instance=ExtResource("4_kt1jv")]
 
@@ -13,8 +21,15 @@
 position = Vector2(804, 511)
 
 [node name="Spawner" parent="." unique_id=1076181210 instance=ExtResource("3_1mka6")]
-position = Vector2(221, 225)
+position = Vector2(294, 680)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=809459796]
 
 [node name="Inventario" parent="CanvasLayer" unique_id=1917329642 instance=ExtResource("4_ou3a6")]
+
+[node name="UI" parent="CanvasLayer" unique_id=424089814 instance=ExtResource("6_trm3b")]
+
+[node name="Tower" parent="." unique_id=1403503163 instance=ExtResource("5_kt1jv")]
+position = Vector2(702, 511)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

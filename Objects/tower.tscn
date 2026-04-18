@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://fskvg0ku8lqn"]
+
+[ext_resource type="Script" uid="uid://2llxv0l7orop" path="res://Scripts/tower.gd" id="1_vdavm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70krq"]
+
+[node name="Tower" type="StaticBody2D" unique_id=1403503163]
+scale = Vector2(2.7418113, 2.7418113)
+script = ExtResource("1_vdavm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=18474348]
+shape = SubResource("RectangleShape2D_70krq")
+debug_color = Color(0, 0.62650937, 0.5134416, 0.41960785)

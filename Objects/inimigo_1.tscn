@@ -4,9 +4,29 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mf5ts"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bckuh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bckuh"]
+
 [node name="Inimigo 1" type="CharacterBody2D" unique_id=1255377736]
 script = ExtResource("1_bckuh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1143187079]
 shape = SubResource("RectangleShape2D_mf5ts")
+disabled = true
 debug_color = Color(0.9111287, 0.2752617, 0.29197332, 0.41960785)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1073730860]
+scale = Vector2(8, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1321279111]
+shape = SubResource("CircleShape2D_bckuh")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1244894626]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1157396401]
+shape = SubResource("RectangleShape2D_bckuh")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
