@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d087dbsxgts81"]
+
+[ext_resource type="Script" uid="uid://cpvfc2aidioh4" path="res://terreno.gd" id="1_muyse"]
+[ext_resource type="Texture2D" uid="uid://04d5fokte7xh" path="res://Sprites/Sprite-0001.png" id="1_ud6ri"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eukd2"]
+texture = ExtResource("1_ud6ri")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mjojr"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_eukd2")
+
+[node name="Terreno" type="TileMapLayer" unique_id=942283548]
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_mjojr")
+script = ExtResource("1_muyse")
+width = 32
+height = 32

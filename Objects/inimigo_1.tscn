@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bnvlr1334abof"]
+
+[ext_resource type="Script" uid="uid://3jsmvo761x7p" path="res://inimigo_1.gd" id="1_bckuh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf5ts"]
+
+[node name="Inimigo 1" type="CharacterBody2D" unique_id=1255377736]
+script = ExtResource("1_bckuh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1143187079]
+shape = SubResource("RectangleShape2D_mf5ts")
+debug_color = Color(0.9111287, 0.2752617, 0.29197332, 0.41960785)

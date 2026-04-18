@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://eive3scjxkt6"]
+
+[ext_resource type="Texture2D" uid="uid://c4o6sr77ur0k3" path="res://Sprites/Sprite-0003.png" id="1_p5h00"]
+[ext_resource type="Script" uid="uid://22xwvjjsy8yh" path="res://Scripts/slot.gd" id="2_ycaob"]
+
+[node name="Button" type="Button" unique_id=485949074]
+modulate = Color(1, 1, 1, 0.49019608)
+icon = ExtResource("1_p5h00")
+flat = true
+script = ExtResource("2_ycaob")

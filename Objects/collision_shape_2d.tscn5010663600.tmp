@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bxyirf85b3540"]
+
+[ext_resource type="Script" uid="uid://dgyqsjl0j3m8b" path="res://teste.gd" id="1_uid0i"]
+
+[node name="CollisionShape2D" type="Node2D" unique_id=1441389350]
+scale = Vector2(26.741636, 26.741636)
+script = ExtResource("1_uid0i")
+
+[node name="Button" type="Button" parent="." unique_id=1415831687]
+offset_right = 8.0
+offset_bottom = 8.0
