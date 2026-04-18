@@ -7,7 +7,7 @@
 
 [node name="Game" type="Node2D" unique_id=141833346]
 
-[node name="Terreno" parent="." unique_id=942283548 instance=ExtResource("4_kt1jv")]
+[node name="Terreno" parent="." unique_id=2062443727 instance=ExtResource("4_kt1jv")]
 
 [node name="Player" parent="." unique_id=987165084 instance=ExtResource("1_djap5")]
 position = Vector2(804, 511)
