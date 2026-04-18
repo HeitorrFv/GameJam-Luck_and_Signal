@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cu0gvk6jf8iy0"]
+
+[ext_resource type="Shader" uid="uid://bqsbuentsokma" path="res://Shaders/blur.gdshader" id="1_tujx6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tsfa4"]
+shader = ExtResource("1_tujx6")
+shader_parameter/lod = 0.0
+
+[node name="Blur" type="ColorRect" unique_id=19215889]
+material = SubResource("ShaderMaterial_tsfa4")
+offset_right = 40.0
+offset_bottom = 40.0

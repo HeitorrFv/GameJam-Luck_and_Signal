@@ -3,7 +3,7 @@ extends Control
 @onready var card1 = $ColorRect
 @onready var card2 = $ColorRect2
 @onready var card3 = $ColorRect3
-@onready var blur = $ColorRect4
+@onready var blur = $"../Blur"
 
 func _ready() -> void:
 	blur.material.set_shader_parameter("lod", 0.0)

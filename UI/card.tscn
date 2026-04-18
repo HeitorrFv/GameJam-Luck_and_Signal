@@ -2,14 +2,9 @@
 
 [ext_resource type="Script" uid="uid://f5djmt3hvvjo" path="res://card.gd" id="1_ww2gn"]
 [ext_resource type="Texture2D" uid="uid://hd2cwnqvqmwf" path="res://Sprites/Tarot_Template.png" id="2_gjfx2"]
-[ext_resource type="Shader" uid="uid://bqsbuentsokma" path="res://Shaders/blur.gdshader" id="3_d460q"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gjfx2"]
 load_path = "res://.godot/imported/Tarot_Template.png-54d1626a191eecad736637a904887a65.ctex"
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tsfa4"]
-shader = ExtResource("3_d460q")
-shader_parameter/lod = 0.0
 
 [node name="Card" type="Control" unique_id=225922840]
 layout_mode = 3
@@ -69,12 +64,6 @@ grow_vertical = 2
 scale = Vector2(6, 6)
 pivot_offset = Vector2(19, 27.5)
 texture_normal = ExtResource("2_gjfx2")
-
-[node name="ColorRect4" type="ColorRect" parent="." unique_id=182005951]
-material = SubResource("ShaderMaterial_tsfa4")
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
 
 [connection signal="mouse_entered" from="ColorRect" to="." method="_on_color_rect_mouse_entered"]
 [connection signal="mouse_exited" from="ColorRect" to="." method="_on_color_rect_mouse_exited"]

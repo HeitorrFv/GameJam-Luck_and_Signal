@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://mxo6hvy5twau" path="res://UI/inventario.tscn" id="4_ou3a6"]
 [ext_resource type="PackedScene" uid="uid://fskvg0ku8lqn" path="res://Objects/tower.tscn" id="5_kt1jv"]
 [ext_resource type="PackedScene" uid="uid://bocr03xw2ekxe" path="res://UI/ui.tscn" id="6_trm3b"]
+[ext_resource type="PackedScene" uid="uid://cu0gvk6jf8iy0" path="res://blur.tscn" id="8_5ntml"]
 [ext_resource type="PackedScene" uid="uid://di1nog2kf727f" path="res://UI/card.tscn" id="8_hkbd0"]
 
 [node name="Game" type="Node2D" unique_id=141833346]
@@ -24,6 +25,15 @@ position = Vector2(804, 511)
 position = Vector2(294, 680)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=809459796]
+
+[node name="Blur" parent="CanvasLayer" unique_id=19215889 instance=ExtResource("8_5ntml")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Inventario" parent="CanvasLayer" unique_id=1917329642 instance=ExtResource("4_ou3a6")]
 
