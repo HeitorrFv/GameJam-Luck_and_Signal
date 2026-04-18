@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bvbgdafexio05"]
+
+[ext_resource type="Shader" uid="uid://bqsbuentsokma" path="res://Shaders/blur.gdshader" id="1_h40d6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_var0u"]
+shader = ExtResource("1_h40d6")
+shader_parameter/lod = 0.0
+
+[node name="ColorRect" type="ColorRect" unique_id=1241300706]
+material = SubResource("ShaderMaterial_var0u")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

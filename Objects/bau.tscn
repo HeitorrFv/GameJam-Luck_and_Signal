@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://bdk4qlim0eu0f"]
 
+[ext_resource type="Script" uid="uid://c350430nf4d6j" path="res://Objects/bau.gd" id="1_yyr11"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uq4jd"]
 
 [node name="Bau" type="Area2D" unique_id=1302534591]
 scale = Vector2(3, 3)
+script = ExtResource("1_yyr11")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=669192697]
 shape = SubResource("RectangleShape2D_uq4jd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -7,12 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://mxo6hvy5twau" path="res://UI/inventario.tscn" id="4_ou3a6"]
 [ext_resource type="PackedScene" uid="uid://fskvg0ku8lqn" path="res://Objects/tower.tscn" id="5_kt1jv"]
 [ext_resource type="PackedScene" uid="uid://bocr03xw2ekxe" path="res://UI/ui.tscn" id="6_trm3b"]
+[ext_resource type="PackedScene" uid="uid://di1nog2kf727f" path="res://UI/card.tscn" id="8_hkbd0"]
 
 [node name="Game" type="Node2D" unique_id=141833346]
 script = ExtResource("1_cnmcn")
 
 [node name="Timer" type="Timer" parent="." unique_id=2124504861]
-wait_time = 4.0
 autostart = true
 
 [node name="Terreno" parent="." unique_id=2062443727 instance=ExtResource("4_kt1jv")]
@@ -28,6 +28,8 @@ position = Vector2(294, 680)
 [node name="Inventario" parent="CanvasLayer" unique_id=1917329642 instance=ExtResource("4_ou3a6")]
 
 [node name="UI" parent="CanvasLayer" unique_id=424089814 instance=ExtResource("6_trm3b")]
+
+[node name="Card" parent="CanvasLayer" unique_id=225922840 instance=ExtResource("8_hkbd0")]
 
 [node name="Tower" parent="." unique_id=1403503163 instance=ExtResource("5_kt1jv")]
 position = Vector2(702, 511)
