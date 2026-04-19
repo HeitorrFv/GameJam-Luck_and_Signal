@@ -6,6 +6,43 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gjfx2"]
 load_path = "res://.godot/imported/Tarot_Template.png-54d1626a191eecad736637a904887a65.ctex"
 
+[sub_resource type="Animation" id="Animation_gjfx2"]
+resource_name = "Flip"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(-6, 6)]
+}
+
+[sub_resource type="Animation" id="Animation_d460q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6, 6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tsfa4"]
+_data = {
+&"Flip": SubResource("Animation_gjfx2"),
+&"RESET": SubResource("Animation_d460q")
+}
+
 [node name="Card" type="Control" unique_id=225922840]
 layout_mode = 3
 anchors_preset = 15
@@ -31,6 +68,9 @@ grow_vertical = 2
 scale = Vector2(6, 6)
 pivot_offset = Vector2(19, 27.5)
 texture_normal = SubResource("CompressedTexture2D_gjfx2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect" unique_id=1696344725]
+libraries/ = SubResource("AnimationLibrary_tsfa4")
 
 [node name="ColorRect2" type="TextureButton" parent="." unique_id=233036155]
 layout_mode = 1
@@ -65,6 +105,7 @@ scale = Vector2(6, 6)
 pivot_offset = Vector2(19, 27.5)
 texture_normal = ExtResource("2_gjfx2")
 
+[connection signal="button_down" from="ColorRect" to="." method="_on_color_rect_button_down"]
 [connection signal="mouse_entered" from="ColorRect" to="." method="_on_color_rect_mouse_entered"]
 [connection signal="mouse_exited" from="ColorRect" to="." method="_on_color_rect_mouse_exited"]
 [connection signal="mouse_entered" from="ColorRect2" to="." method="_on_color_rect_2_mouse_entered"]

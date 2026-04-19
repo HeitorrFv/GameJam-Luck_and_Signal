@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dym4at4hdgfds"]
+
+[ext_resource type="Script" uid="uid://begncfpdobkdx" path="res://Scripts/arma.gd" id="1_07rnn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_owmjs"]
+
+[node name="Arma" type="Area2D" unique_id=1542939334]
+script = ExtResource("1_07rnn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=748568977]
+shape = SubResource("RectangleShape2D_owmjs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

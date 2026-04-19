@@ -3,7 +3,10 @@ extends Control
 @onready var card1 = $ColorRect
 @onready var card2 = $ColorRect2
 @onready var card3 = $ColorRect3
+@onready var anim1 = $ColorRect/AnimationPlayer
 @onready var blur = $"../Blur"
+
+var use = 0
 
 func _ready() -> void:
 	blur.material.set_shader_parameter("lod", 0.0)
@@ -41,6 +44,10 @@ func open() -> void:
 func _process(delta: float) -> void:
 	if Data.CardOpen == 1:
 		open()
+		
+	if use == 1:
+		anim1.play("Flip")
+		use = 0
 
 func rotate() -> void:
 	var tween = create_tween().set_loops()
@@ -92,3 +99,7 @@ func _on_color_rect_3_mouse_exited() -> void:
 	var tween = create_tween().set_parallel()
 	
 	tween.tween_property(card3, "scale", Vector2(6,6), 0.2).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+
+
+func _on_color_rect_button_down() -> void:
+	use = 1

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://blhdyykflk1ua"]
+
+[ext_resource type="Texture2D" uid="uid://c64brsapmc553" path="res://Sprites/2026-04-18-213325-Desenho 221.png" id="1_422lk"]
+[ext_resource type="Script" uid="uid://c0353g7sv1tl0" path="res://Scripts/potion.gd" id="1_pyn01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyn01"]
+
+[node name="Potion" type="Area2D" unique_id=1465618131]
+script = ExtResource("1_pyn01")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1108926548]
+shape = SubResource("RectangleShape2D_pyn01")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2106061453]
+texture = ExtResource("1_422lk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://biju3fv4562ca" path="res://Player.gd" id="1_y0qk3"]
 [ext_resource type="Texture2D" uid="uid://dll5rqw6irmgr" path="res://Sprites/Sprite-0002.png" id="2_3y5cq"]
+[ext_resource type="PackedScene" uid="uid://dym4at4hdgfds" path="res://Objects/arma.tscn" id="3_2i4gt"]
+
+[sub_resource type="Gradient" id="Gradient_3y5cq"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3y5cq"]
 size = Vector2(10, 13)
@@ -12,6 +16,16 @@ scale = Vector2(3, 3)
 slide_on_ceiling = false
 script = ExtResource("1_y0qk3")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=251589838]
+amount = 15
+direction = Vector2(0, 0)
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+color_ramp = SubResource("Gradient_3y5cq")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1061050022]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_3y5cq")
@@ -21,3 +35,5 @@ position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=212960298]
 texture = ExtResource("2_3y5cq")
+
+[node name="Arma" parent="." unique_id=1542939334 instance=ExtResource("3_2i4gt")]

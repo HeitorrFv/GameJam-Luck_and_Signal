@@ -37,31 +37,3 @@ ID = 2
 [node name="Button3" parent="HBoxContainer" unique_id=1039101546 instance=ExtResource("1_653co")]
 layout_mode = 2
 ID = 3
-
-[node name="Button4" parent="HBoxContainer" unique_id=4668292 instance=ExtResource("1_653co")]
-layout_mode = 2
-ID = 4
-
-[node name="Button5" parent="HBoxContainer" unique_id=1134263810 instance=ExtResource("1_653co")]
-layout_mode = 2
-ID = 5
-
-[node name="Button6" parent="HBoxContainer" unique_id=283817161 instance=ExtResource("1_653co")]
-layout_mode = 2
-ID = 6
-
-[node name="Button7" parent="HBoxContainer" unique_id=1785181880 instance=ExtResource("1_653co")]
-layout_mode = 2
-ID = 7
-
-[node name="Button8" parent="HBoxContainer" unique_id=701694581 instance=ExtResource("1_653co")]
-layout_mode = 2
-ID = 8
-
-[node name="Button9" parent="HBoxContainer" unique_id=401482757 instance=ExtResource("1_653co")]
-layout_mode = 2
-ID = 9
-
-[node name="Button10" parent="HBoxContainer" unique_id=479383589 instance=ExtResource("1_653co")]
-layout_mode = 2
-ID = 10
